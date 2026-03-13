@@ -24,4 +24,16 @@ createPost("sookie","Where's my cricket!")
 createPost("Nadja", "Lets watch Intersteller!")
 
 
+
+
+function likePost(x) {
+    for (let n = 0;n < postArray.length; n++ ) {
+        if (n === x) {
+            post.id =+1
+        };
+    }
+}
+
+likePost(3)
+
 console.log(postArray)
