@@ -29,8 +29,21 @@ function likePost(x) {
 }
 
 function sortByNewest() {
-    for (let i = 0; i < postArray.length; i++)
-        
+    postArray.sort((a,b) => b.timestamp - a.timestamp);
+}
+
+function sortByLikes() {
+    postArray.sort((a,b) => b.likes - a.likes)
+}
+
+function getPostByUser(name) {
+    let findName
+    for (let i = 0; i < postArray.length; i++) {
+        if (postArray[i].username === name) {
+            findName = postArray[i].content;
+            console.log(findName);
+        }
+    }
 }
 
 function getFeed() {
@@ -45,4 +58,6 @@ createPost("Nadja", "Lets watch Intersteller!")
 likePost(3)
 likePost(2)
 
+sortByLikes()
 getFeed()
+getPostByUser("sookie")
