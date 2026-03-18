@@ -46,9 +46,21 @@ function getPostByUser(name) {
     }
 }
 
-function getFeed() {
-    console.log(postArray)
+// function getFeed() {
+//     console.log(postArray)
+// }
+
+let feedCon = document.getElementById("feed-container");
+
+function renderFeed() {
+    for (let i = 0; i <= postArray; i++) {
+        i = document.createElement("p");
+        
+    }
 }
+
+
+
 
 createPost("vice", "playing golf on Friday!")
 createPost("ally", "Taking the cats for a walk!")
@@ -59,5 +71,10 @@ likePost(3)
 likePost(2)
 
 sortByLikes()
-getFeed()
+// getFeed()
 getPostByUser("sookie")
+
+renderFeed()
+
+
+

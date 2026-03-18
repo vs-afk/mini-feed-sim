@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(46, 128, 100);
+    min-height: 100vh;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+#feed-container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(28, 88, 59);
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    border: 2px solid black;
+    margin: auto;
+    margin-top: 10px;
+}
