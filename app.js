@@ -53,9 +53,25 @@ function getPostByUser(name) {
 let feedCon = document.getElementById("feed-container");
 
 function renderFeed() {
-    for (let i = 0; i <= postArray; i++) {
-        i = document.createElement("p");
-        
+    // feedCon.textContent = ""
+    for (let i = 0; i < postArray.length; i++) {
+        let userfeed = document.createElement("div")
+        let contfeed = document.createElement("div")
+        let likefeed = document.createElement("div")
+
+        let likebtn1 = document.createElement("button")
+
+        likebtn1.addEventListener("click", function() {
+            postArray[i].likes++
+        })
+        userfeed.textContent = postArray[i].username
+        contfeed.textContent = postArray[i].content
+        likefeed.textContent = postArray[i].likes
+
+        feedCon.append(userfeed)
+        feedCon.append(contfeed)
+        feedCon.append(likefeed)
+        feedCon.append(likebtn1)
     }
 }
 
@@ -75,6 +91,7 @@ sortByLikes()
 getPostByUser("sookie")
 
 renderFeed()
+
 
 
 
