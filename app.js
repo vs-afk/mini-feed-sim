@@ -53,7 +53,7 @@ function getPostByUser(name) {
 let feedCon = document.getElementById("feed-container");
 
 function renderFeed() {
-    // feedCon.textContent = ""
+    feedCon.textContent = ""
     for (let i = 0; i < postArray.length; i++) {
         let userfeed = document.createElement("div")
         let contfeed = document.createElement("div")
@@ -63,7 +63,10 @@ function renderFeed() {
 
         likebtn1.addEventListener("click", function() {
             postArray[i].likes++
+            likefeed.textContent = postArray[i].likes
         })
+
+
         userfeed.textContent = postArray[i].username
         contfeed.textContent = postArray[i].content
         likefeed.textContent = postArray[i].likes
@@ -82,6 +85,8 @@ createPost("vice", "playing golf on Friday!")
 createPost("ally", "Taking the cats for a walk!")
 createPost("sookie","Where's my cricket!")
 createPost("Nadja", "Lets watch Intersteller!")
+createPost("Liith", "Looking for a new bonnet!")
+// createPost("Hina", "Has anyone seen Fish? Or lambchop?")
 
 likePost(3)
 likePost(2)
@@ -90,6 +95,7 @@ sortByLikes()
 // getFeed()
 getPostByUser("sookie")
 
+renderFeed()
 renderFeed()
 
 
