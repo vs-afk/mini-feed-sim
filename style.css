@@ -11,7 +11,7 @@ body {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .header {
@@ -20,9 +20,9 @@ body {
 }
 
 #feed-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
     background-color: rgb(28, 88, 59);
     width: 100%;
     max-width: 400px;
@@ -30,4 +30,15 @@ body {
     border: 2px solid black;
     margin: auto;
     margin-top: 0;
+    overflow-y: auto;
+}
+
+#create-container {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    border: 2px solid black;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
 }

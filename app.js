@@ -58,8 +58,12 @@ function renderFeed() {
         let userfeed = document.createElement("div")
         let contfeed = document.createElement("div")
         let likefeed = document.createElement("div")
-
         let likebtn1 = document.createElement("button")
+
+        likebtn1.textContent = "Likes"
+        likebtn1.style.padding = "6px 12px"
+        likebtn1.style.backgroundColor = "lightgrey"
+
 
         likebtn1.addEventListener("click", function() {
             postArray[i].likes++
@@ -76,6 +80,7 @@ function renderFeed() {
         feedCon.append(likefeed)
         feedCon.append(likebtn1)
     }
+    
 }
 
 
@@ -88,15 +93,15 @@ createPost("Nadja", "Lets watch Intersteller!")
 createPost("Liith", "Looking for a new bonnet!")
 // createPost("Hina", "Has anyone seen Fish? Or lambchop?")
 
-likePost(3)
-likePost(2)
+// likePost(3)
+// likePost(2)
 
 sortByLikes()
 // getFeed()
 getPostByUser("sookie")
 
 renderFeed()
-renderFeed()
+
 
 
 
