@@ -46,9 +46,9 @@ function getPostByUser(name) {
     }
 }
 
-// function getFeed() {
-//     console.log(postArray)
-// }
+function getFeed() {
+    console.log(postArray)
+}
 
 let feedCon = document.getElementById("feed-container");
 
@@ -63,7 +63,8 @@ function renderFeed() {
         likebtn1.textContent = "Likes"
         likebtn1.style.padding = "6px 12px"
         likebtn1.style.backgroundColor = "lightgrey"
-
+        likebtn1.style.marginBottom = "20px"
+        
 
         likebtn1.addEventListener("click", function() {
             postArray[i].likes++
@@ -75,23 +76,34 @@ function renderFeed() {
         contfeed.textContent = postArray[i].content
         likefeed.textContent = postArray[i].likes
 
+        // feedCon.append("*************")
         feedCon.append(userfeed)
         feedCon.append(contfeed)
         feedCon.append(likefeed)
         feedCon.append(likebtn1)
+        // feedCon.append("*************")
+        
     }
     
 }
 
+let subuserinfo = document.getElementById("userinfo")
+let subpostinfo = document.getElementById("postinfo")
+let subpostbtn = document.getElementById("postbtn")
 
+subpostbtn.addEventListener("click", function() {
+    createPost(subuserinfo.value,subpostinfo.value)
+    renderFeed()
+    subuserinfo.value = ""
+    subpostinfo.value = ""
+})
 
-
-createPost("vice", "playing golf on Friday!")
+createPost("vince", "Playing 18 holes on Friday!")
 createPost("ally", "Taking the cats for a walk!")
 createPost("sookie","Where's my cricket!")
 createPost("Nadja", "Lets watch Intersteller!")
-createPost("Liith", "Looking for a new bonnet!")
-// createPost("Hina", "Has anyone seen Fish? Or lambchop?")
+createPost("Lilith", "Looking for a new bonnet!")
+createPost("Hina", "Has anyone seen Fish? Or lambchop?")
 
 // likePost(3)
 // likePost(2)
